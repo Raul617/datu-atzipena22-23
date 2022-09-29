@@ -1,6 +1,7 @@
 package dambi;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -88,9 +89,47 @@ public static void edukiBistaratu() throws IOException{
     }
 
 
-public static void fitxategiaSortu(){
+public static void fitxategiaSortu() throws IOException{
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Zer zoaz deskribatzera?");   
+    String karpeta= in.next();
+
+    System.out.println("Zein?");   
+    String fitxategia= in.next();
+
+    System.out.println("Nolakoa da?");
+    in.nextLine();
+    String deskribapena= in.nextLine();
+
+    if(karpeta.toLowerCase().equals("arrainak") || karpeta.toLowerCase().equals("ugaztunak")){
+
+        File f = new File("C:\\Users\\parra.raul\\Desktop\\Datu Atzipena\\1-Fitxategiak\\fileio\\src\\karpeta_berriak\\animaliak\\" + karpeta + "\\" + fitxategia + ".txt" );
+            if(f.createNewFile()){
+                BufferedWriter obj = new BufferedWriter(new FileWriter(f));
+                obj.write(deskribapena);
+                obj.close();
+                System.out.println("Fitxategia gorde da.");
+            }
 
 
-}
+
+    }
+
+    if(karpeta.toLowerCase().equals("barazkiak") || karpeta.toLowerCase().equals("esnekiak")){
+
+        File f = new File("C:\\Users\\parra.raul\\Desktop\\Datu Atzipena\\1-Fitxategiak\\fileio\\src\\karpeta_berriak\\elikagaiak\\"+ karpeta + "\\" + fitxategia + ".txt" );
+        if(f.createNewFile()){
+            BufferedWriter obj = new BufferedWriter(new FileWriter(f));
+            obj.write(deskribapena);
+            obj.close();
+            System.out.println("Fitxategia gorde da.");
+        }
+
+
+    }
+
+
+}   
 
 }
