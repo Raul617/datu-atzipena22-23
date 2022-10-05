@@ -28,8 +28,7 @@ public class JaxBExampleSimple
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
-
-            
+            spain.setImportance( 1 );
             spain.setPopulation( 45000000 );
 
             /* init jaxb marshaler */

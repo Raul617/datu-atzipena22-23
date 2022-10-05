@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Country>
+<Country importance="1">
     <Country_Name>Spain</Country_Name>
     <Country_Population>45000000</Country_Population>
     <Country_Foundation_Date>1469-10-19</Country_Foundation_Date>

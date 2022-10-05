@@ -2,6 +2,7 @@ package dambi.business;
 
 import java.time.LocalDate;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -30,6 +31,8 @@ public class Country
 
     int       population;
 
+    int       importance;
+    
     public int getPopulation()
     {
         return population;
@@ -82,6 +85,16 @@ public class Country
     public void setCapital( String capital )
     {
         this.capital = capital;
+    }
+
+    @XmlAttribute( name = "importance", required = true )
+    public void setImportance( int importance )
+    {
+        this.importance = importance;
+    }
+
+    public int getImportance(){
+        return importance;
     }
 
     public LocalDate getFoundation()

@@ -17,7 +17,7 @@ import dambi.business.Country;
  * 
  * @author dgutierrez-diez
  */
-public class JaxBExampleList
+public class JaxBunmExampleList
 {
 
     public static void main( String[] args )
@@ -30,8 +30,8 @@ public class JaxBExampleList
             spain.setName( "Spain" );
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
-            spain.setImportance( 1 );
-            spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
+
+
 
             Country usa = new Country();
             usa.setName( "USA" );
@@ -39,11 +39,16 @@ public class JaxBExampleList
             usa.setContinent( "America" );
 
 
-            usa.setFoundation( LocalDate.of( 1776, 7, 4 ) );
+            Country japan = new Country();
+            japan.setName("Japan");
+            japan.setCapital("Tokyo");
+            japan.setContinent("Asia");
+
 
             Countries countries = new Countries();
             countries.add( spain );
             countries.add( usa );
+            countries.add( japan );
 
             /* init jaxb marshaler */
             JAXBContext jaxbContext = JAXBContext.newInstance( Countries.class );
@@ -53,7 +58,7 @@ public class JaxBExampleList
             jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
             /* marshaling of java objects in xml (output to file and standard output) */
-            jaxbMarshaller.marshal( countries, new File( "list_countries.xml" ) );
+            jaxbMarshaller.marshal( countries, new File( "countries.xml" ) );
             jaxbMarshaller.marshal( countries, System.out );
 
         }
