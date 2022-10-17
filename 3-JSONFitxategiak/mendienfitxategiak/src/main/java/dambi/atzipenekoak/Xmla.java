@@ -19,4 +19,11 @@ public class Xmla {
         this.strFileOut = strFileOut;
     }
     
+    public Mendiak irakurri() {
+
+    }
+
+    public Mendiak idatzi() {
+        
+    }
 }
