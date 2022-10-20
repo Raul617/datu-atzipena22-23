@@ -1,0 +1,26 @@
+[
+    {
+        "id": 2,
+        "mendia": "Alluitz",
+        "altuera": 1034,
+        "probintzia": "Bizkaia"
+    },
+    {
+        "id": 3,
+        "mendia": "Anboto",
+        "altuera": 1331,
+        "probintzia": "Bizkaia"
+    },
+    {
+        "id": 14,
+        "mendia": "Mugarra",
+        "altuera": 964,
+        "probintzia": "Bizkaia"
+    },
+    {
+        "id": 15,
+        "mendia": "Oiz",
+        "altuera": 1029,
+        "probintzia": "Bizkaia"
+    }
+]
